@@ -1,4 +1,9 @@
 @use './partials/variables' as *;
+@use './partials/common' as *;
+@use './partials/header' as *;
+@use './partials/main' as *;
+@use './partials/footer' as *;
+
 
 * {
     margin: 0;

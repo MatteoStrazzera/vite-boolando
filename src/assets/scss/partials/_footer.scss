@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+.site-footer {
+    background-color: $footer_bg_dark;
+}
+
+.company-info {
+    color: white;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    font-size: 0.75rem;
+    gap: 1rem;
+}
+
+.socials {
+    color: white;
+}
