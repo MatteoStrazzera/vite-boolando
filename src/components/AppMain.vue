@@ -1,6 +1,11 @@
 <script>
+import ProductCard from './ProductCard.vue';
+
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: {
+        ProductCard
+    }
 }
 </script>
 
