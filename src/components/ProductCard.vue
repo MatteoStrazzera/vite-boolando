@@ -1,6 +1,11 @@
 <script>
 export default {
-    name: 'ProductCard'
+    name: 'ProductCard',
+    props: {
+        product: {
+            type: Object,
+        }
+    }
 }
 </script>
 
@@ -8,18 +13,18 @@ export default {
 
     <div class="img-container">
         <div class="image">
-            <img src="" alt="">
-            <img class="hover-img" src="" alt="">
+            <img :src="product.firstImage" alt="">
+            <img class="hover-img" :src="product.secondImage" alt="">
         </div>
         <div class="heart">&hearts;</div>
-        <div class="discount"></div>
-        <div class="sustain"></div>
+        <div class="discount">{{ product.discount }}</div>
+        <div class="sustain">{{ product.specialTag }}</div>
         <ul class="product-description">
-            <li class="product-brand"></li>
-            <li class="product-name"><strong></strong></li>
+            <li class="product-brand">{{ product.brand }}</li>
+            <li class="product-name"><strong>{{ product.productName }}</strong></li>
             <li class="product-price">
-                <span class="discount-price"><strong> &euro;</strong></span>
-                <span class="old-price"> &euro;</span>
+                <span class="discount-price"><strong>{{ product.price.discountedPrice }} &euro;</strong></span>
+                <span class="old-price">{{ product.price.oldPrice }} &euro;</span>
             </li>
         </ul>
     </div>
